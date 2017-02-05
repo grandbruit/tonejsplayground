@@ -59,6 +59,10 @@ input[type=text] {
   width: 60px;
 }
 
+input[disabled] {
+  color: #ccc;
+}
+
 label:not(.button) {
   margin: 0 4px;
 }

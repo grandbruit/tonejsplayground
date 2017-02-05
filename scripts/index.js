@@ -12,9 +12,12 @@ if (localStorage.getItem('note')) {
   note.value = localStorage.getItem('note');
 }
 
+updateNoteDisabled();
+
 // Save field values to local storage when they change
 instrument.addEventListener('change', function() {
   localStorage.setItem('instrument', this.value);
+  updateNoteDisabled();
 });
 
 note.addEventListener('input', function() {
@@ -23,10 +26,27 @@ note.addEventListener('input', function() {
 
 // Handle click for Play button
 play.addEventListener('mousedown', function() {
-  window[instrument.value].triggerAttack(note.value);
+  var noteValue = currentInstrumentUsesNote() ? note.value : null;
+  window[instrument.value].triggerAttack(noteValue);
 });
 
 play.addEventListener('mouseup', function() {
   window[instrument.value].triggerRelease();
 });
 
+// Functions
+function currentInstrumentUsesNote() {
+  if (instrument.value == 'MetalSynth') {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function updateNoteDisabled() {
+  if (currentInstrumentUsesNote()) {
+    note.disabled = false;
+  } else {
+    note.disabled = true;
+  }
+}
