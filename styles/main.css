@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, 
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", 
+    "Fira Sans", "Droid Sans", "Helvetica Neue", 
+    sans-serif;
+}
+
+body {
+  height: inherit;
+  width: inherit;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+
+button, .button, input {
+  border: 1px solid #ccc;
+}
+
+button, .button {
+  font-size: 12px;
+  padding: 7px 12px;
+  background-color: #eee;
+  padding: 7px 12px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+button:hover, .button:hover {
+  background-color: #fff;
+}
+
+button:active {
+  color: white;
+  background-color: #000;
+}
+
+input, label {
+  font-size: 12px;
+}
+
+input[type=text] {
+  padding: 7px;
+  margin: 0 5px;
+  width: 60px;
+}
+
+input[type=file] {
+  /* From https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ */
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+input[type=file]:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+label:not(.button) {
+  margin: 0 4px;
+}
