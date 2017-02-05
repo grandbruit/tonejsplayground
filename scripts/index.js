@@ -27,16 +27,20 @@ note.addEventListener('input', function() {
 // Handle click for Play button
 play.addEventListener('mousedown', function() {
   var noteValue = currentInstrumentUsesNote() ? note.value : null;
+  console.log(noteValue);
+  console.log('beforeattack');
   window[instrument.value].triggerAttack(noteValue);
+  console.log('Afterattack');
 });
 
 play.addEventListener('mouseup', function() {
+  console.log('hum');
   window[instrument.value].triggerRelease();
 });
 
 // Functions
 function currentInstrumentUsesNote() {
-  if (instrument.value == 'MetalSynth') {
+  if (['MetalSynth', 'NoiseSynth'].indexOf(instrument.value) >= 0) {
     return false;
   } else {
     return true;
