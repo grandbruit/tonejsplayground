@@ -1,9 +1,13 @@
-var synth = AMSynth;
+// Interface elements
+var instrument = document.getElementById('instrument');
+var note = document.getElementById('note');
+var play = document.getElementById('play');
 
-document.getElementById('play').addEventListener('mousedown', function() {
-  synth.triggerAttack("C4");
+// Event listeners
+play.addEventListener('mousedown', function() {
+  window[instrument.value].triggerAttack(note.value);
 })
 
-document.getElementById('play').addEventListener('mouseup', function() {
-  synth.triggerRelease();
+play.addEventListener('mouseup', function() {
+  window[instrument.value].triggerRelease();
 })
