@@ -9,4 +9,4 @@ MetalSynth = new Tone.MetalSynth({
 	"modulationIndex" : 32,
 	"resonance" : 4000,
 	"octaves" : 1.5
-}).toMaster();
+});

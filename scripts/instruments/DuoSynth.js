@@ -40,4 +40,4 @@ DuoSynth = new Tone.DuoSynth({
       "release": 0.5
     }
   }
-}).toMaster();
+});

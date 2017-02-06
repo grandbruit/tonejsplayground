@@ -20,4 +20,4 @@ FMSynth = new Tone.FMSynth({
     "sustain": 1,
     "release": 0.5
   }
-}).toMaster();
+});

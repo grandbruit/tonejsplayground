@@ -11,4 +11,4 @@ MembraneSynth = new Tone.MembraneSynth({
 		"release" : 1.4,
 		"attackCurve" : "exponential"
 	}
-}).toMaster();
+});

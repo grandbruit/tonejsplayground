@@ -24,4 +24,4 @@ MonoSynth = new Tone.MonoSynth({
 		"octaves" : 7,
 		"exponent" : 2
 	}
-}).toMaster();
+});

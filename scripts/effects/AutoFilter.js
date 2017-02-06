@@ -1,0 +1,12 @@
+AutoFilter = new Tone.AutoFilter({
+	"frequency" : 1,
+	"type" : "sine",
+	"depth" : 1,
+	"baseFrequency" : 200,
+	"octaves" : 2.6,
+	"filter" : {
+		"type" : "lowpass",
+		"rolloff" : -12,
+		"Q" : 1,
+	}
+});

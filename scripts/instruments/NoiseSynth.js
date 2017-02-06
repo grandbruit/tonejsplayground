@@ -7,4 +7,4 @@ NoiseSynth = new Tone.NoiseSynth({
 		"decay" : 0.1,
 		"sustain" : 0.0,
 	}
-}).toMaster();
+});

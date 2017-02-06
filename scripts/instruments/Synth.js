@@ -8,4 +8,4 @@ Synth = new Tone.Synth({
 		"sustain" : 0.3,
 		"release" : 1
 	}
-}).toMaster();
+});
