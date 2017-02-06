@@ -1,0 +1,1 @@
+BitCrusher = new Tone.BitCrusher(4);
