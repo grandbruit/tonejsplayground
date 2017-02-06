@@ -1,0 +1,1 @@
+StereoWidener = new Tone.StereoWidener(0.8);
