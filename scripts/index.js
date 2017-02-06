@@ -127,7 +127,6 @@ function routeAudio() {
   // Route remaining items
   var previousItem = lastItem;
   while (currentItem = activeItems.pop()) {
-    console.log('connected ' + currentItem.value + ' to ' + previousItem.value);
     window[currentItem.value].connect(window[previousItem.value]);
     previousItem = currentItem;
   }
